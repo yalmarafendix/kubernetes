@@ -50,7 +50,6 @@ var (
 	podsPerNode    = flag.Int("pods_per_node", 1, "Number of serve_hostname pods per node")
 	upTo           = flag.Int("up_to", 1, "Number of iterations or -1 for no limit")
 	maxPar         = flag.Int("max_par", 500, "Maximum number of queries in flight")
-	gke            = flag.String("gke_context", "", "Target GKE cluster with context gke_{project}_{zone}_{cluster-name}")
 )
 
 const (

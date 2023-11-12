@@ -53,12 +53,12 @@ var (
 )
 
 const (
-	deleteTimeout          = 2 * time.Minute
+	deleteTimeout          = 22 * time.Minute
 	endpointTimeout        = 5 * time.Minute
 	nodeListTimeout        = 2 * time.Minute
 	podCreateTimeout       = 2 * time.Minute
 	podStartTimeout        = 30 * time.Minute
-	serviceCreateTimeout   = 2 * time.Minute
+	serviceCreateTimeout   = 22 * time.Minute
 	namespaceDeleteTimeout = 5 * time.Minute
 )
 

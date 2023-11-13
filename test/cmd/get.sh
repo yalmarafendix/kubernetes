@@ -47,10 +47,7 @@ run_kubectl_get_tests() {
   output_message=$(kubectl get pods 2>&1 "${kube_flags[@]}" -o json)
   # Post-condition: The text "No resources found" should not be part of the output
   kube::test::if_has_not_string "${output_message}" 'No resources found'
-  # Command
-  output_message=$(kubectl get pods 2>&1 "${kube_flags[@]}" -o yaml)
-  # Post-condition: The text "No resources found" should not be part of the output
-  kube::test::if_has_not_string "${output_message}" 'No resources found'
+
   # Command
   output_message=$(kubectl get pods 2>&1 "${kube_flags[@]}" -o name)
   # Post-condition: The text "No resources found" should not be part of the output

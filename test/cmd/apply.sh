@@ -15,8 +15,6 @@
 # limitations under the License.
 
 set -o errexit
-set -o nounset
-set -o pipefail
 
 # Runs tests related to kubectl apply.
 run_kubectl_apply_tests() {
@@ -24,7 +22,7 @@ run_kubectl_apply_tests() {
   set -o errexit
 
   create_and_use_new_namespace
-  kube::log::status "Testing kubectl apply"
+  kube::log::status "Testing apply"
   ## kubectl apply should create the resource that doesn't exist yet
   # Pre-Condition: no POD exists
   kube::test::get_object_assert pods "{{range.items}}{{${id_field:?}}}:{{end}}" ''
